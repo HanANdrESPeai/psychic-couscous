@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+wget -O playlist.m3u8 "http://81.211.33.93/hls-live3/streams/1tv-orbit-plus-4/1tv-orbit-plus-420.m3u8?cdn=https://edge1.1internet.tv&s=aM4s4MMZPNh8OET2gkXlXcG0cbRkNkYPVVDwPLf%2F5sgTwohj0HWKGEDMtNHTMxeRo7n0T8Qi%2FwJEMC2%2BNwNMFCowbWPZ70RG%2FUkEIMYKAyw%3D" --header "User-Agent: Wget/1.21.4"||exit 1
+a=($(cat playlist.m3u8|grep -i "\.vtt"|tail -n 1|tail -c 27|sed "s/_/ /gI;s/\./\n/gI"))
+b=$(echo ${a[0]}|head -c 2)
+c=$(echo ${a[0]}|head -c 5|tail -c 2)
+d=$(echo ${a[0]}|head -c 7|tail -c 2)
+e=$(echo ${a[0]}|head -c 9|tail -c 2)
+f=$(echo ${a[1]})
+./download_1.sh $b $c $d $e $f
