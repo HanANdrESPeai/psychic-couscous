@@ -10,8 +10,13 @@ a(){
 b(){
         wget -T 15 -O 202312$g"T"$h$i$j.ts "http://81.211.33.66/hls-live4/streams/1tv-orbit-plus-4/1tv-orbit-plus-45-202312"$g"T"$h$i$j"-TFrag_"$k".ts"
 }
-c(){                                                            let d=d+$1                                              if(($d>=60));then                                               let d=d-60                                              let c=c+1
-                if(($c>=60));then                                               let c=c-60
+c(){
+        let d=d+$1
+        if(($d>=60));then
+                let d=d-60
+                let c=c+1
+                if(($c>=60));then
+                        let c=c-60
                         let b=b+1
                         if(($b>=24));then
                                 let b=b-24
