@@ -107,5 +107,6 @@ do
                 e
                 let e=e+1
                 c 10
+                clear
         fi
 done
