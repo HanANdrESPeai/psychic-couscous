@@ -31,11 +31,9 @@ jobs:
           wget -O 1.tgz "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz"
           tar -xf 1.tgz
           ./ngrok authtoken 2Xlkdm2D8daL24DwyAJf1nxBFOG_2WkvUucboTnKQSR83uFCs
-          ./ngrok http 8000 >& /dev/null &
+          ./ngrok http 80 >& /dev/null &
           sleep 10
           cp /etc/nginx/sites-available/default 1
-          sudo sed -i "s/listen 80/listen 8000/gI" /etc/nginx/sites-available/default
-          cp /etc/nginx/sites-available/default 2
           curl "localhost:4040/api/tunnels"
 
       # Runs a set of commands using the runners shell
