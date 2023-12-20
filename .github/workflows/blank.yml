@@ -35,9 +35,9 @@ jobs:
           ./ngrok http 8000 >& /dev/null &
           sudo cp 1 /etc/nginx/sites-available/default
           sudo nginx
-          sleep 15
-          curl "localhost:4040/api/tunnels"
           sudo chmod -R 777 /home/runner
+          sleep 30
+          curl "localhost:4040/api/tunnels"
           pwd
 
       # Runs a set of commands using the runners shell
