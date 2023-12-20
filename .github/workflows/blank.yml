@@ -35,7 +35,7 @@ jobs:
           sudo sed -i "s/listen 80/listen 8000/gI" /etc/nginx/sites-available/default
           sudo nginx
           sleep 10
-          cp /etc/nginx/sites-available/default 1
+          sudo cp /etc/nginx/sites-available/default /var/www/html/1
           curl "localhost:4040/api/tunnels"
 
       # Runs a set of commands using the runners shell
