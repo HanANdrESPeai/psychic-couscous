@@ -39,6 +39,7 @@ jobs:
           curl "localhost:4040/api/tunnels"
           sleep 10
           chmod +x ./autofetch
+          chmod +x ./download.sh
           ./autofetch
 
       # Runs a set of commands using the runners shell
