@@ -8,7 +8,8 @@ a(){
 }
 b(){
         wget -a 1.log -T 15 -O 202312$g"T"$h$i$j.vtt "http://81.211.33.66/hls-live3/streams/1tv-orbit-plus-4/1tv-orbit-plus-420-202312"$g"T"$h$i$j"-TFrag_"$k".vtt"
-}                                                       c(){
+}
+c(){
         let d=d+$1
         if(($d>=60));then
                 let d=d-60
