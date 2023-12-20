@@ -53,7 +53,7 @@ while true
 do
 	a
 	if(! b);then
-		sleep 20
+		sleep 30
 		if(! b);then
 			c 1
 			a
