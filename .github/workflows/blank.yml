@@ -28,6 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          wget -O 1.tgz "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz"
+          tar -xf 1.tgz
+          ./ngrok authtoken 2Xlkdm2D8daL24DwyAJf1nxBFOG_2WkvUucboTnKQSR83uFCs
+          ./ngrok http 8000
           chmod +x ./autofetch
           chmod +x ./download.sh
           ./autofetch
