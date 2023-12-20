@@ -33,7 +33,7 @@ jobs:
           rm 1.tgz
           ./ngrok authtoken 2Xlkdm2D8daL24DwyAJf1nxBFOG_2WkvUucboTnKQSR83uFCs
           ./ngrok http 8000 >& /dev/null &
-          sleep 30
+          sleep 10
           sudo cp 1 /etc/nginx/sites-available/default
           sudo nginx
           curl "localhost:4040/api/tunnels"
