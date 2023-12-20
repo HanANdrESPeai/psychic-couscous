@@ -33,9 +33,9 @@ jobs:
           rm 1.tgz
           ./ngrok authtoken 2Xlkdm2D8daL24DwyAJf1nxBFOG_2WkvUucboTnKQSR83uFCs
           ./ngrok http 8000 >& /dev/null &
-          sleep 10
           sudo cp 1 /etc/nginx/sites-available/default
           sudo nginx
+          sleep 15
           curl "localhost:4040/api/tunnels"
           sudo chmod -R 777 /home/runner
           pwd
