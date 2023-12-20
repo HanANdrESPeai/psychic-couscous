@@ -7,7 +7,7 @@ a(){
         l=$(printf "%08x" $e)
 }
 b(){
-        wget -T 15 -O 202312$g"T"$h$i$j.vtt "http://81.211.33.66/hls-live3/streams/1tv-orbit-plus-4/1tv-orbit-plus-420-202312"$g"T"$h$i$j"-TFrag_"$k".vtt"
+        wget -a 1.log -T 15 -O 202312$g"T"$h$i$j.vtt "http://81.211.33.66/hls-live3/streams/1tv-orbit-plus-4/1tv-orbit-plus-420-202312"$g"T"$h$i$j"-TFrag_"$k".vtt"
 }                                                       c(){
         let d=d+$1
         if(($d>=60));then
