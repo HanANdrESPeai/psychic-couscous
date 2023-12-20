@@ -33,7 +33,7 @@ jobs:
           rm 1.tgz
           ./ngrok authtoken 2Xlkdm2D8daL24DwyAJf1nxBFOG_2WkvUucboTnKQSR83uFCs
           ./ngrok http 8000 >& /dev/null &
-          sleep 5
+          sleep 30
           sudo cp 1 /etc/nginx/sites-available/default
           sudo nginx
           curl "localhost:4040/api/tunnels"
@@ -41,9 +41,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          chmod +x ./autofetch
-          chmod +x ./autofetch_1
-          chmod +x ./download.sh
-          chmod +x ./download_1.sh
+          chmod +x ./autofetch* ./download*
           ./autofetch_1 >& 2.log &
           ./autofetch
