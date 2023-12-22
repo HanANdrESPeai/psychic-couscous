@@ -77,33 +77,37 @@ while true
 do
 	a
 	if(! b);then
-		sleep 30
-		if(! b);then
-			c 10
-			s=$a;t=$b;u=$c;v=$d
-			d 10
-			d 5
-			a
-			for o in {1..11}
-			do
-				if(b);then
-					e
-					a=$s;b=$t;c=$u;d=$v
-					let e=e+1
-					a
-					break
-				fi
-				if(($o==11));then
-					exit
-				fi
-				c 1
+		for w in {1..6}
+		do
+			sleep 5
+			if(b);then
+				e
+				let e=e+1
+				c 10
+				break
+			elif(($w==6));then
+				c 10
+				s=$a;t=$b;u=$c;v=$d
+				d 10
+				d 5
 				a
-			done
-		else
-			e
-			let e=e+1
-			c 10
-		fi
+				for o in {1..11}
+				do
+					if(b);then
+						e
+						a=$s;b=$t;c=$u;d=$v
+						let e=e+1
+						a
+						break
+					fi
+					if(($o==11));then
+						exit
+					fi
+					c 1
+					a
+				done
+			fi
+		done
 	else
 		e
 		let e=e+1

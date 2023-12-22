@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-wget -O playlist.m3u8 "http://81.211.33.93/hls-live4/streams/1tv-orbit-plus-4/1tv-orbit-plus-420.m3u8?cdn=https://edge1.1internet.tv&s=xyxyLbBrszHrHQ6U6jud3cG0cbRkNkYPVVDwPLf%2F5sgTwohj0HWKGEDMtNHTMxeRo7n0T8Qi%2FwJEMC2%2BNwNMFCAxzOkWSCT2OSQ4MLJA9gc%3D" --header "User-Agent: Wget/1.21.4"||exit 1
+wget -O playlist.m3u8 "http://81.211.33.93/hls-live4/streams/1tv-orbit-plus-4/1tv-orbit-plus-420.m3u8?cdn=https://edge1.1internet.tv&s=zgQMnqhg3OFdxhMpf%2F7qB8G0cbRkNkYPVVDwPLf%2F5sgTwohj0HWKGEDMtNHTMxeRo7n0T8Qi%2FwJEMC2%2BNwNMFEKcD4%2FeLt6H084zq1k6ysg%3D" --header "User-Agent: Wget/1.21.4"||exit 1
 a=($(cat playlist.m3u8|grep -i "\.vtt"|tail -n 1|sed "s/\//\n/gI"|tail -n 1|sed "s/-/\n/gI"|tail -n 2))
 b=$(echo ${a[0]}|head -c 8|tail -c 2)
 c=$(echo ${a[0]}|head -c 11|tail -c 2)

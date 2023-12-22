@@ -53,38 +53,42 @@ while true
 do
 	a
 	if(! b);then
-		sleep 30
-		if(! b);then
-			c 1
-			a
+		for w in {1..6}
+		do
+			sleep 5
 			if(b);then
-				c 9
+				let e=e+1
+				c 10
+				break
+			elif(($w==6));then
+				c 1
 				a
-			else
-				d 1
-				a
-				s=$a;t=$b;u=$c;v=$d
-				d 10
-				a
-				for o in {1..12}
-				do
-					if(b);then
-						a=$s;b=$t;c=$u;d=$v
-						let e=e+1
-						a
-						break
-					fi
-					if(($o==12));then
-						exit
-					fi
-					c 1
+				if(b);then
+					c 9
 					a
-				done
+				else
+					d 1
+					a
+					s=$a;t=$b;u=$c;v=$d
+					d 10
+					a
+					for o in {1..12}
+					do
+						if(b);then
+							a=$s;b=$t;c=$u;d=$v
+							let e=e+1
+							a
+							break
+						fi
+						if(($o==12));then
+							exit
+						fi
+						c 1
+						a
+					done
+				fi
 			fi
-		else
-			let e=e+1
-			c 10
-		fi
+		done
 	else
 		let e=e+1
 		c 10
